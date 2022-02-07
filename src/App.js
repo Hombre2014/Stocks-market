@@ -1,11 +1,23 @@
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import Stocks from './components/Stocks';
+import StocksFetch from './redux/StocksFetch';
+import IndicesFetch from './redux/IndicesFetch';
+import Navbar from './components/Navbar';
 import './App.css';
 
-function App() {
+const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => { dispatch(StocksFetch()); }, []);
+  useEffect(() => { dispatch(IndicesFetch()); }, []);
+
   return (
     <div>
-      <h1>Stocks Market</h1>
+      <Navbar />
+      <Stocks />
     </div>
   );
-}
+};
 
 export default App;

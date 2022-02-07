@@ -1,0 +1,15 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.icons {
+  display: flex;
+  width: 12%;
+  justify-content: space-between;
+}
+
+.logo {
+  margin: 0.5rem 0;
+}
