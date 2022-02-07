@@ -2,7 +2,7 @@ import React from 'react';
 import { FaMicrophone, FaCog } from 'react-icons/fa';
 import './navbar.css';
 import logo from '../images/stock-exchange.jpg';
-import Indices from './Indices';
+// import Indices from './Indices';
 
 const Navbar = () => {
   const n = 1;
@@ -20,7 +20,7 @@ const Navbar = () => {
         <img src={logo} alt="Stock market logo" width="50%" />
       </div>
       <div className="indices">
-        <Indices />
+        {/* <Indices /> */}
       </div>
     </nav>
   );

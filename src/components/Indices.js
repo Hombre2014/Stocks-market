@@ -10,6 +10,7 @@ const Indices = () => {
     <div>
       <p>
         Wilshire 5000 total market:
+        {' '}
         {indices[0].price}
       </p>
     </div>
