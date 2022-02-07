@@ -1,0 +1,12 @@
+.most-heading {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 2px;
+  column-gap: 2px;
+}
