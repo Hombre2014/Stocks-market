@@ -1,28 +1,55 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { getStock } from '../redux/StockReducer';
+import { useDispatch, useSelector } from 'react-redux';
+import StockFetch from '../redux/StockFetch';
 
 const StockDetails = () => {
+  const stock = useSelector((state) => state.stockReducer);
   const params = useParams();
   const dispatch = useDispatch();
-  const stock = useSelector((state) => state.StockReducer);
-  console.log(stock);
 
   useEffect(() => {
-    setTimeout(() => {
-      dispatch(getStock(params.symbol));
-    }, 1000);
+    // setTimeout(() => {
+    dispatch(StockFetch(params.symbol));
+    // }, 1000);
   }, [dispatch]);
 
   return (
     <div>
-      <h1>
+      <h2>
         Stock&apos;s
         Details
+      </h2>
+      <p>
         Symbol:
+        {' '}
         {params.symbol}
-      </h1>
+      </p>
+      <p>
+        Ask:
+        {' '}
+        {stock[0].ask}
+      </p>
+      <p>
+        Ask Size:
+        {' '}
+        {stock[0].asize}
+      </p>
+      <p>
+        Bid:
+        {' '}
+        {stock[0].bid}
+      </p>
+      <p>
+        Bid Size:
+        {' '}
+        {stock[0].bsize}
+      </p>
+      {/* <p>
+        Time:
+        {' '}
+        {stock[0].timestamp}
+      </p> */}
     </div>
   );
 };
