@@ -1,6 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
 import Stock from './Stock';
 import './stocks.css';
 
@@ -14,14 +14,17 @@ const Stocks = () => {
       <section className="card-container">
         {stocks.map(
           (stock) => (
-            <Stock
-              key={uuidv4()}
-              name={stock.company_name}
-              symbol={stock.symbol}
-              price={stock.price}
-              change={stock.change}
-              percentage={stock.change_percentage}
-            />
+            <div className="card" key={stock.symbol}>
+              <Link to={`/stock-details/${stock.symbol}`}>
+                <Stock
+                  name={stock.company_name}
+                  symbol={stock.symbol}
+                  price={stock.price}
+                  change={stock.change}
+                  percentage={stock.change_percentage}
+                />
+              </Link>
+            </div>
           ),
         )}
       </section>

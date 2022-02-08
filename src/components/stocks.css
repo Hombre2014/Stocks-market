@@ -10,3 +10,13 @@
   row-gap: 2px;
   column-gap: 2px;
 }
+
+.card {
+  background-color: #577dc5;
+  width: calc(50% - 2px);
+  padding: 0.5rem;
+}
+
+.card:nth-of-type(2n) {
+  background-color: #355fad;
+}

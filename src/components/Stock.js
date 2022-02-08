@@ -1,5 +1,6 @@
 import React from 'react';
 import './stock.css';
+// import { FaLongArrowAltUp } from 'react-icons/fa';
 
 const Stock = (stock) => {
   const {
@@ -7,8 +8,9 @@ const Stock = (stock) => {
   } = stock;
   const changeFloat = parseFloat(change).toFixed(2);
   const percentageFloat = parseFloat(percentage).toFixed(2);
+
   return (
-    <div className="card">
+    <div>
       <h4>{name}</h4>
       <h5>
         Symbol:
