@@ -6,24 +6,24 @@ import './stocks.css';
 
 const Stocks = () => {
   const stocks = useSelector((state) => state.stocksReducer);
-  const [searchText, setSearchText] = useState('');
+  const [searchString, setSearchString] = useState('');
   console.log(stocks);
 
-  const searchFilter = (e) => {
-    setSearchText(e.target.value);
+  const searchStock = (e) => {
+    setSearchString(e.target.value);
   };
 
-  const filtered = stocks.filter((stock) => Object.keys(stock).some((key) => stock[key]
+  const selection = stocks.filter((stock) => Object.keys(stock).some((key) => stock[key]
     .toString()
     .toLowerCase()
-    .includes(searchText.toLocaleLowerCase())));
+    .includes(searchString.toLocaleLowerCase())));
 
   return (
-    <div>
+    <div className="stocks-section">
       <h2 className="most-heading">Most active US stocks</h2>
-      <input onChange={searchFilter} type="text" placeholder="Search for stock" className="search" value={searchText} />
+      <input onChange={searchStock} type="text" placeholder="Search for stock" className="search" value={searchString} />
       <section className="card-container">
-        {filtered.map(
+        {selection.map(
           (stock) => (
             <div className="card" key={stock.symbol}>
               <Link className="link" to={`/stock-details/${stock.symbol}`}>
