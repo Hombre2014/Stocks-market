@@ -22,7 +22,6 @@ const Stocks = () => {
                   price={stock.price}
                   change={stock.change}
                   percentage={stock.change_percentage}
-                  hoverable
                 />
               </Link>
             </div>
