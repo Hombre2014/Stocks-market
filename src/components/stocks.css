@@ -1,6 +1,7 @@
 .most-heading {
   text-align: center;
   margin-bottom: 1rem;
+  background-color: #5588e3;
 }
 
 .card-container {
@@ -10,7 +11,7 @@
 }
 
 .card {
-  background-color: #577dc5;
+  background-color: #4268af;
   width: 50%;
   padding: 0.5rem;
 }
@@ -29,9 +30,8 @@
 .card:nth-of-type(23),
 .card:nth-of-type(26),
 .card:nth-of-type(27),
-.card:nth-of-type(30)
-{
-  background-color: #355fad;
+.card:nth-of-type(30) {
+  background-color: #3e61a5;
 }
 
 .link {

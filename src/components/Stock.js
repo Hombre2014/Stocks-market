@@ -1,6 +1,6 @@
 import React from 'react';
 import './stock.css';
-// import { FaLongArrowAltUp } from 'react-icons/fa';
+import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
 
 const Stock = (stock) => {
   const {
@@ -10,32 +10,46 @@ const Stock = (stock) => {
   const percentageFloat = parseFloat(percentage).toFixed(2);
 
   return (
-    <div>
-      <h4>{name}</h4>
-      <h5>
-        Symbol:
-        {' '}
-        {symbol}
-      </h5>
-      <p>
-        Price: $
-        {price}
-      </p>
-      <p>
-        Change:
-        {' '}
-        <span style={{ color: (changeFloat > 0) ? 'black' : 'red' }}>
-          {changeFloat}
-        </span>
-      </p>
-      <p>
-        Percent change:
-        {' '}
-        <span style={{ color: (percentageFloat > 0) ? 'black' : 'red' }}>
-          {percentageFloat}
-          %
-        </span>
-      </p>
+    <div className="stock-container">
+      <div className="stock-header">
+        <h4>{name}</h4>
+        <h5>
+          Symbol:
+          {' '}
+          {symbol}
+        </h5>
+      </div>
+      <div className="stock-details">
+        <p>
+          Price: $
+          {price}
+        </p>
+        <p>
+          Change: $
+          {' '}
+          <span style={{ color: (changeFloat > 0) ? 'black' : '#ffe5e5' }}>
+            {changeFloat}
+          </span>
+          <FaArrowUp style={{
+            color: '#86e48d',
+            display: (changeFloat > 0) ? 'inline' : 'none',
+          }}
+          />
+          <FaArrowDown style={{
+            color: '#ff0000',
+            display: (changeFloat < 0) ? 'inline' : 'none',
+          }}
+          />
+        </p>
+        <p>
+          Percent change:
+          {' '}
+          <span style={{ color: (percentageFloat > 0) ? 'black' : '#ffe5e5' }}>
+            {percentageFloat}
+            %
+          </span>
+        </p>
+      </div>
     </div>
   );
 };
