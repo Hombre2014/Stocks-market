@@ -5,7 +5,9 @@ import StockFetch from '../redux/StockFetch';
 
 const StockDetails = () => {
   const stock = useSelector((state) => state.stockReducer);
+  console.log(stock);
   const params = useParams();
+  console.log(params);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -45,11 +47,6 @@ const StockDetails = () => {
         {' '}
         {stock[0].bsize}
       </p>
-      {/* <p>
-        Time:
-        {' '}
-        {stock[0].timestamp}
-      </p> */}
     </div>
   );
 };
