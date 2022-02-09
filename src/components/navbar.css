@@ -1,0 +1,22 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #5588e3;
+}
+
+.icons {
+  display: flex;
+  width: 12%;
+  justify-content: space-between;
+}
+
+.logo {
+  margin: 0.5rem 0;
+}
+
+.home {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
