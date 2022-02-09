@@ -16,11 +16,20 @@
 }
 
 .logo {
-  margin: 0.5rem 0;
+  max-width: 50%;
 }
 
 .home {
   text-decoration: none;
   color: #fff;
   cursor: pointer;
+}
+
+.main {
+  display: flex;
+  column-gap: 10px;
+}
+
+.indices {
+  max-width: 50%;
 }
