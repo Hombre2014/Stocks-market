@@ -13,3 +13,9 @@
 .logo {
   margin: 0.5rem 0;
 }
+
+.home {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}

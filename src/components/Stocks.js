@@ -15,13 +15,14 @@ const Stocks = () => {
         {stocks.map(
           (stock) => (
             <div className="card" key={stock.symbol}>
-              <Link to={`/stock-details/${stock.symbol}`}>
+              <Link className="link" to={`/stock-details/${stock.symbol}`}>
                 <Stock
                   name={stock.company_name}
                   symbol={stock.symbol}
                   price={stock.price}
                   change={stock.change}
                   percentage={stock.change_percentage}
+                  hoverable
                 />
               </Link>
             </div>
