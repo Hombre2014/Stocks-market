@@ -7,12 +7,6 @@ import InfoFetch from '../redux/InfoFetch';
 const StockDetails = () => {
   const dispatch = useDispatch();
   const params = useParams();
-  const stock = useSelector((state) => state.stockReducer);
-  const info = useSelector((state) => state.infoReducer);
-  console.log('This is params: ', params);
-  console.log('This is params.symbol: ', params.symbol);
-  console.log('This is stock: ', stock);
-  console.log('This is info: ', info);
 
   useEffect(() => {
     dispatch(StockFetch(params.symbol));
@@ -22,7 +16,15 @@ const StockDetails = () => {
     dispatch(InfoFetch(params.symbol));
   }, []);
 
+  const stock = useSelector((state) => state.stockReducers);
+  const info = useSelector((state) => state.infoReducer);
+  console.log('This is params: ', params);
+  console.log('This is params.symbol: ', params.symbol);
+  console.log('This is stock symbol?: ', stock);
+  console.log('This is info: ', info);
+
   const demoLogo = '../images/company.png';
+
   return (
     <div className="info-container">
       <h2 style={{ textAlign: 'center' }}>
@@ -39,7 +41,7 @@ const StockDetails = () => {
           <h4>
             Symbol:
             {' '}
-            {info[0].symbol}
+            {params.symbol}
           </h4>
           <h5>
             Exchange:
