@@ -1,12 +1,9 @@
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import IndicesFetch from '../redux/IndicesFetch';
 
 const Indices = (ticker) => {
   const { index } = ticker;
-  const currentIndex = useSelector((state) => state.indicesReducer);
-
-  console.log('This is the currentIndex: ', currentIndex);
 
   const dispatch = useDispatch();
 
@@ -16,6 +13,10 @@ const Indices = (ticker) => {
   useEffect(() => {
     dispatch(IndicesFetch(index));
   }, []);
+
+  const currentIndex = useSelector((state) => state.price);
+
+  console.log('This is the currentIndex: ', currentIndex);
 
   const priceFloat = parseFloat(currentIndex[0].price).toFixed(2);
 
