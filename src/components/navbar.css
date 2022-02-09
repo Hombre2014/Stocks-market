@@ -5,6 +5,10 @@
   background-color: #5588e3;
 }
 
+.navigation > h1 {
+  font-size: 2rem;
+}
+
 .icons {
   display: flex;
   width: 12%;
