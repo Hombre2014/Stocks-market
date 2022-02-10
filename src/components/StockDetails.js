@@ -5,7 +5,9 @@ import StockFetch from '../redux/StockFetch';
 
 const StockDetails = () => {
   const stock = useSelector((state) => state.stockReducer);
+  console.log('This is stock: ', stock);
   const params = useParams();
+  console.log('This is params: ', params);
   const dispatch = useDispatch();
 
   useEffect(() => {
