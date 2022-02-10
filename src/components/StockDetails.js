@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import millify from 'millify';
+import { FaAngleLeft } from 'react-icons/fa';
 import StockFetch from '../redux/StockFetch';
 import InfoFetch from '../redux/InfoFetch';
+import './stockdetails.css';
 
 const StockDetails = () => {
   const stock = useSelector((state) => state.stockReducer);
@@ -34,7 +37,10 @@ const StockDetails = () => {
           Stock&apos;s
           Details
         </h2>
-        <div>
+        <a href="/">
+          <FaAngleLeft className="go-back" />
+        </a>
+        <div className="company-header">
           <div className="left">
             <h3>
               Name:
@@ -49,15 +55,15 @@ const StockDetails = () => {
             <h5>
               Exchange:
               {' '}
-              {info[0].name}
+              {info[0].exchange}
             </h5>
           </div>
           <div className="right">
-            <img src={info[0]?.logo || demoLogo} alt="Company logo" width="128" height="128" />
+            <img src={info[0]?.logo || demoLogo} alt="Company logo" width="128" />
           </div>
         </div>
-        <div>
-          <div>
+        <div className="company-info">
+          <div className="company-data">
             <p>
               Industry:
               {' '}
@@ -71,53 +77,50 @@ const StockDetails = () => {
             <p>
               Market Cap:
               {' '}
-              {info[0].marketcap}
+              {millify(info[0].marketcap, { precision: 3 })}
             </p>
             <p>
               CEO:
               {' '}
               {info[0].ceo}
             </p>
-            <p>
+            {/* <p>
               Web:
               {' '}
               {info[0].url}
-            </p>
+            </p> */}
           </div>
-          <div>
-            <div className="ask">
-              <p>
-                Ask:
-                {' '}
-                {stock[0].ask}
-              </p>
-              <p>
-                Ask Size:
-                {' '}
-                {stock[0].asize}
-              </p>
-            </div>
-            <div className="bid">
-              <p>
-                Bid:
-                {' '}
-                {stock[0].bid}
-              </p>
-              <p>
-                Bid Size:
-                {' '}
-                {stock[0].bsize}
-              </p>
+          <div className="market-info">
+            <div className="bid-ask">
+              <div className="ask">
+                <p>
+                  Ask:
+                  {' '}
+                  {stock[0].ask}
+                </p>
+                <p>
+                  Ask Size:
+                  {' '}
+                  {stock[0].asize}
+                </p>
+              </div>
+              <div className="bid">
+                <p>
+                  Bid:
+                  {' '}
+                  {stock[0].bid}
+                </p>
+                <p>
+                  Bid Size:
+                  {' '}
+                  {stock[0].bsize}
+                </p>
+              </div>
             </div>
             <p>
               Employees:
               {' '}
               {info[0].employees}
-            </p>
-            <p>
-              State:
-              {' '}
-              {info[0].state}
             </p>
             <p>
               Address:
@@ -126,9 +129,9 @@ const StockDetails = () => {
             </p>
           </div>
         </div>
-        <div>
+        <div className="description">
           <p>
-            Info:
+            Description:
             {' '}
             {info[0].description}
           </p>

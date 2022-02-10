@@ -1,0 +1,58 @@
+.info-container {
+  margin: 0.5rem;
+}
+
+.info-container > h2 {
+  margin: 1rem 0;
+}
+
+.go-back {
+  margin: 0.5rem 0;
+  cursor: pointer;
+  color: #fff;
+}
+
+.left > h3,
+.left > h4,
+.left > h5 {
+  margin-bottom: 0.5rem;
+}
+
+.company-header {
+  display: flex;
+}
+
+.company-info {
+  display: flex;
+  column-gap: 0.32rem;
+  margin-top: 1rem;
+  line-height: 1.5rem;
+}
+
+.company-data {
+  min-width: calc(50% - 0.16rem);
+}
+
+.ask {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.market-info {
+  min-width: calc(50% - 0.16rem);
+}
+
+.bid-ask {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  margin-top: 1rem;
+  line-height: 1.25rem;
+}
