@@ -5,7 +5,6 @@ import {
 } from 'react-router-dom';
 import Stocks from './components/Stocks';
 import StocksFetch from './redux/StocksFetch';
-import IndicesFetch from './redux/IndicesFetch';
 import InfoFetch from './redux/InfoFetch';
 import StockFetch from './redux/StockFetch';
 import StockDetails from './components/StockDetails';
@@ -16,7 +15,6 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => { dispatch(StocksFetch()); }, []);
-  useEffect(() => { dispatch(IndicesFetch()); }, []);
   useEffect(() => { dispatch(StockFetch()); }, []);
   useEffect(() => { dispatch(InfoFetch()); }, []);
 
