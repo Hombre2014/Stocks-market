@@ -1,6 +1,7 @@
 .navigation {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   padding: 1rem;
   background-color: #5588e3;
 }

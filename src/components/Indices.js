@@ -14,24 +14,23 @@ const Indices = (ticker) => {
     dispatch(IndicesFetch(index));
   }, []);
 
-  // const currentIndex = useSelector((state) => state.price);
-
-  // console.log('This is the currentIndex: ', currentIndex);
-
-  // const priceFloat = parseFloat(currentIndex[0].price).toFixed(2);
-
   const indices = useSelector((state) => state.indicesReducer);
 
-  console.log(indices);
+  console.log('This is indices: ', indices);
+  if (indices.length > 0) {
+    return (
+      <div>
+        <p>
+          {index}
+          :
+          {' '}
+          {parseFloat(indices[0].price).toFixed(2)}
+        </p>
+      </div>
+    );
+  }
   return (
-    <div>
-      <p>
-        {index}
-        :
-        {' '}
-        {indices[0].price}
-      </p>
-    </div>
+    <div>Loading ...</div>
   );
 };
 

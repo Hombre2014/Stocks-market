@@ -7,7 +7,7 @@ const apiKey = 'API_KEY84LXEWREHZBTFOEHCOJ18U8OAPLZVT6D';
 const IndicesFetch = (payload) => async (dispatch) => {
   const res = await fetch(`${URL}${payload}?apikey=${apiKey}`);
   const index = await res.json();
-  console.log(index);
+  console.log('This is from API', index);
   dispatch(getIndices(index));
 };
 
