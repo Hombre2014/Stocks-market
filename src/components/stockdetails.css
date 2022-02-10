@@ -22,6 +22,15 @@ h2 {
   color: #fff;
 }
 
+.left {
+  min-width: 50%;
+  padding-right: 0.5rem;
+}
+
+.right {
+  min-width: 50%;
+}
+
 .left > h3,
 .left > h4,
 .left > h5 {
@@ -41,6 +50,7 @@ h2 {
 
 .company-header {
   display: flex;
+  justify-content: space-between;
 }
 
 .company-info {
@@ -56,12 +66,12 @@ h2 {
 
 .ask {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .bid {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .market-info {
@@ -71,6 +81,11 @@ h2 {
 .bid-ask {
   display: flex;
   flex-direction: column;
+}
+
+.ask > p,
+.bid > p {
+  margin-right: 2rem;
 }
 
 .description {
@@ -84,6 +99,10 @@ h2 {
   }
 
   .left {
+    min-width: 50%;
+  }
+
+  .right {
     min-width: 50%;
   }
 

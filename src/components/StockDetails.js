@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-// import millify from 'millify';
 import { FaAngleLeft } from 'react-icons/fa';
 import StockFetch from '../redux/StockFetch';
 import InfoFetch from '../redux/InfoFetch';
@@ -9,27 +8,21 @@ import './stockdetails.css';
 
 const StockDetails = () => {
   const stock = useSelector((state) => state.stockReducer);
-  console.log('This is stock: ', stock);
   const params = useParams();
-  console.log('This is params: ', params);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(StockFetch(params.symbol));
   }, [dispatch]);
 
-  // Add new useSelector for Info
   const info = useSelector((state) => state.infoReducer);
-  console.log('This is info: ', info);
 
-  // Starts adding new function infoFetch
   useEffect(() => {
     dispatch(InfoFetch(params.symbol));
   }, []);
 
   const demoLogo = '../images/company.png';
 
-  // The new Info plus the old stock data combined
   if (info.length !== 0) {
     return (
       <div className="info-container">
@@ -79,18 +72,15 @@ const StockDetails = () => {
             <p>
               Market Cap:
               {' '}
-              {parseFloat(info[0].marketcap).toFixed(2)}
+              {parseFloat((info[0].marketcap) / 1000000000).toFixed(2)}
+              {' '}
+              B
             </p>
             <p>
               CEO:
               {' '}
               {info[0].ceo}
             </p>
-            {/* <p>
-              Web:
-              {' '}
-              {info[0].url}
-            </p> */}
           </div>
           <div className="market-info">
             <div className="bid-ask">
@@ -144,41 +134,6 @@ const StockDetails = () => {
   return (
     <div>Loading ...</div>
   );
-
-  // Old return without Info that is working!
-  // return (
-  //   <div>
-  //     <h2>
-  //       Stock&apos;s
-  //       Details
-  //     </h2>
-  //     <p>
-  //       Symbol:
-  //       {' '}
-  //       {params.symbol}
-  //     </p>
-  //     <p>
-  //       Ask:
-  //       {' '}
-  //       {stock[0].ask}
-  //     </p>
-  //     <p>
-  //       Ask Size:
-  //       {' '}
-  //       {stock[0].asize}
-  //     </p>
-  //     <p>
-  //       Bid:
-  //       {' '}
-  //       {stock[0].bid}
-  //     </p>
-  //     <p>
-  //       Bid Size:
-  //       {' '}
-  //       {stock[0].bsize}
-  //     </p>
-  //   </div>
-  // );
 };
 
 export default StockDetails;

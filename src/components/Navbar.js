@@ -5,8 +5,6 @@ import logo from '../images/stock-exchange.jpg';
 import Indices from './Indices';
 
 const Navbar = () => {
-  const n = 1;
-  console.log(n);
   const tickers = ['W5000', 'RUT', 'GSPC', 'DJI', 'IXIC'];
   return (
     <nav>

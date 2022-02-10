@@ -8,8 +8,6 @@ const Stocks = () => {
   const stocks = useSelector((state) => state.stocksReducer);
   const [searchString, setSearchString] = useState('');
 
-  console.log(stocks);
-
   const searchStock = (e) => {
     setSearchString(e.target.value);
   };
