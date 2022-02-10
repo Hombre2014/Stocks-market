@@ -11,9 +11,7 @@ const StockDetails = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // setTimeout(() => {
     dispatch(StockFetch(params.symbol));
-    // }, 1000);
   }, [dispatch]);
 
   return (
@@ -47,11 +45,6 @@ const StockDetails = () => {
         {' '}
         {stock[0].bsize}
       </p>
-      {/* <p>
-        Time:
-        {' '}
-        {stock[0].timestamp}
-      </p> */}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Stock from './Stock';
@@ -6,13 +6,25 @@ import './stocks.css';
 
 const Stocks = () => {
   const stocks = useSelector((state) => state.stocksReducer);
+  const [searchString, setSearchString] = useState('');
 
   console.log(stocks);
+
+  const searchStock = (e) => {
+    setSearchString(e.target.value);
+  };
+
+  const selection = stocks.filter((stock) => Object.keys(stock).some((key) => stock[key]
+    .toString()
+    .toLowerCase()
+    .includes(searchString.toLocaleLowerCase())));
+
   return (
-    <div>
+    <div className="stocks-section">
       <h2 className="most-heading">Most active US stocks</h2>
+      <input onChange={searchStock} type="text" placeholder="Search for stock" className="search" value={searchString} />
       <section className="card-container">
-        {stocks.map(
+        {selection.map(
           (stock) => (
             <div className="card" key={stock.symbol}>
               <Link className="link" to={`/stock-details/${stock.symbol}`}>
