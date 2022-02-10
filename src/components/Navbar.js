@@ -21,10 +21,13 @@ const Navbar = () => {
         <div className="logo">
           <img src={logo} alt="Stock market logo" width="100%" />
         </div>
-        <div className="indices">
-          {tickers.map((ticker) => (
-            <Indices index={ticker} key={ticker} />
-          ))}
+        <div className="indices-container">
+          <h2>Major US indices</h2>
+          <div className="indices">
+            {tickers.map((ticker) => (
+              <Indices index={ticker} key={ticker} />
+            ))}
+          </div>
         </div>
       </div>
     </nav>

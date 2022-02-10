@@ -28,12 +28,34 @@
 
 .main {
   display: flex;
+  justify-content: space-between;
   column-gap: 10px;
+  background-color: #598ae6;
 }
 
-.indices {
+.hidden {
+  display: none;
+}
+
+.indices-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 50%;
+  min-width: 50%;
+  padding-right: 0.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    margin-top: 1rem;
+  }
+
+  .main {
+    column-gap: 2rem;
+  }
+
+  .indices {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
 }

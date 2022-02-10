@@ -2,12 +2,22 @@
   margin: 0.5rem;
 }
 
-.info-container > h2 {
+.nav {
+  display: flex;
+  align-items: center;
   margin: 1rem 0;
 }
 
+h2 {
+  font-size: 1.25rem;
+}
+
+.nav > h2 {
+  margin: 0 auto;
+}
+
 .go-back {
-  margin: 0.5rem 0;
+  /* margin: 0.5rem 0; */
   cursor: pointer;
   color: #fff;
 }
@@ -16,6 +26,17 @@
 .left > h4,
 .left > h5 {
   margin-bottom: 0.5rem;
+}
+
+.left > h5 {
+  line-height: 1.25rem;
+}
+
+.indices {
+  display: flex;
+  flex-direction: column;
+  min-height: 80%;
+  justify-content: space-between;
 }
 
 .company-header {
@@ -55,4 +76,55 @@
 .description {
   margin-top: 1rem;
   line-height: 1.25rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .info-container {
+    margin: 1rem;
+  }
+
+  .left {
+    min-width: 50%;
+  }
+
+  .h5 {
+    font-size: 0.875rem;
+  }
+
+  .ask,
+  .bid {
+    justify-content: flex-start;
+  }
+
+  .ask > p,
+  .bid > p {
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .info-container {
+    margin: 2rem;
+  }
+
+  .stocks-section {
+    margin: 2rem 0;
+  }
+
+  .search {
+    margin: 2rem 0;
+    height: 2.5rem;
+  }
+
+  .indices {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .nav {
+    margin: 2rem 0;
+  }
 }

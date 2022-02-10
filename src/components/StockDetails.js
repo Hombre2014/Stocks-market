@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import millify from 'millify';
+// import millify from 'millify';
 import { FaAngleLeft } from 'react-icons/fa';
 import StockFetch from '../redux/StockFetch';
 import InfoFetch from '../redux/InfoFetch';
@@ -33,13 +33,15 @@ const StockDetails = () => {
   if (info.length !== 0) {
     return (
       <div className="info-container">
-        <h2 style={{ textAlign: 'center' }}>
-          Stock&apos;s
-          Details
-        </h2>
-        <a href="/">
-          <FaAngleLeft className="go-back" />
-        </a>
+        <div className="nav">
+          <a href="/">
+            <FaAngleLeft className="go-back" />
+          </a>
+          <h2 style={{ textAlign: 'center' }}>
+            Stock&apos;s
+            Details
+          </h2>
+        </div>
         <div className="company-header">
           <div className="left">
             <h3>
@@ -77,7 +79,7 @@ const StockDetails = () => {
             <p>
               Market Cap:
               {' '}
-              {millify(info[0].marketcap, { precision: 3 })}
+              {parseFloat(info[0].marketcap).toFixed(2)}
             </p>
             <p>
               CEO:
