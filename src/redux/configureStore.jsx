@@ -4,9 +4,10 @@ import thunk from 'redux-thunk';
 import stocksReducer from './StocksReducer';
 import stockReducer from './StockReducer';
 import indicesReducer from './IndicesReducer';
+import infoReducer from './InfoReducer';
 
 const reducer = combineReducers({
-  stocksReducer, indicesReducer, stockReducer,
+  stocksReducer, indicesReducer, stockReducer, infoReducer,
 });
 
 const store = createStore(

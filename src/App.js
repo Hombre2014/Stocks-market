@@ -6,6 +6,7 @@ import {
 import Stocks from './components/Stocks';
 import StocksFetch from './redux/StocksFetch';
 import IndicesFetch from './redux/IndicesFetch';
+import InfoFetch from './redux/InfoFetch';
 import StockFetch from './redux/StockFetch';
 import StockDetails from './components/StockDetails';
 import Navbar from './components/Navbar';
@@ -17,6 +18,7 @@ const App = () => {
   useEffect(() => { dispatch(StocksFetch()); }, []);
   useEffect(() => { dispatch(IndicesFetch()); }, []);
   useEffect(() => { dispatch(StockFetch()); }, []);
+  useEffect(() => { dispatch(InfoFetch()); }, []);
 
   return (
     <Router>
