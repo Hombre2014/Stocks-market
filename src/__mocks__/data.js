@@ -12,5 +12,5 @@ export default [
     change: -3.27,
     change_percentage: '-0.09726409',
     company_name: 'Apple Inc.',
-  }
-]
+  },
+];
