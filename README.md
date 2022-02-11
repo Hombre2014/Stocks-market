@@ -1,10 +1,10 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Yuriy Chamkoriyski Stocks Market SPA React, Redux Capstone project
+# Stocks Market SPA React-Redux Capstone project
 
-> Capstone SPA project using React, Redux and API for the stocks market. Displaying real-time market information about stocks and detailed info for the selected stock symbol.
+> Capstone SPA project using React, Redux and API for the stocks market. Displaying stocks market information about the most traded US stocks and detailed info for the selected stock symbol.
 
-<!-- ![screenshot](./src/space-travelers.png) -->
+![App snapshots](./src/images/app_snapshots.jpg)
 
 ## Description
 
@@ -65,7 +65,7 @@ Once you have finished the development of the project, you should record a video
 
 ## Live Demo
 
-No live demo link yet.
+[Live demo]([./src/images/snapshot_home.jpg](https://stocks-market-data.netlify.app/))
 
 ### Prerequisites
 
@@ -129,7 +129,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ### Deployment
 
-No deployment yet.
+[Netlify](https://app.netlify.com/).
 
 ## Author
 
