@@ -6,7 +6,6 @@ const apiKey = 'API_KEY873FXAPMWP2TQJQDYXKAKBTRNM4VM7U3';
 const InfoFetch = (payload) => async (dispatch) => {
   const res = await fetch(`${URL}/${payload}?apikey=${apiKey}`);
   const info = await res.json();
-  console.log('This is InfoFetch: ', info);
   dispatch(getInfo(info));
 };
 

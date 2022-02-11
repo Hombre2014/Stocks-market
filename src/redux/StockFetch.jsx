@@ -6,7 +6,6 @@ const apiKey = 'API_KEY873FXAPMWP2TQJQDYXKAKBTRNM4VM7U3';
 const StockFetch = (payload) => async (dispatch) => {
   const res = await fetch(`${URL}/${payload}?apikey=${apiKey}`);
   const stock = await res.json();
-  console.log(stock);
   dispatch(getStock(stock));
 };
 

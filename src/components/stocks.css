@@ -97,9 +97,16 @@
 }
 
 @media only screen and (min-width: 1280px) {
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
   .card {
     background-color: #4268af !important;
-    width: 16.666666%;
+    width: 16.666%;
     padding: 0.5rem;
   }
 
