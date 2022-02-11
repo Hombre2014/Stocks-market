@@ -17,7 +17,7 @@
 }
 
 .logo {
-  max-width: 50%;
+  max-width: 100%;
 }
 
 .home {
@@ -37,12 +37,10 @@
   display: none;
 }
 
-.indices-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-width: 50%;
-  padding-right: 0.5rem;
+@media only screen and (min-width: 640px) {
+  .logo {
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -53,11 +51,6 @@
   .main {
     margin-top: 1rem;
     column-gap: 2rem;
-  }
-
-  .indices {
-    font-size: 1.25rem;
-    font-weight: bold;
   }
 }
 

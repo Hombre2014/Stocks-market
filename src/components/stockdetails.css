@@ -85,7 +85,8 @@ h2 {
 
 .ask > p,
 .bid > p {
-  margin-right: 2rem;
+  margin-right: 0.5rem;
+  font-size: 0.825rem;
 }
 
 .description {
@@ -118,6 +119,7 @@ h2 {
   .ask > p,
   .bid > p {
     margin-right: 2rem;
+    font-size: 1rem;
   }
 }
 
