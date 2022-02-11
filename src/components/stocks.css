@@ -1,0 +1,134 @@
+.most-heading {
+  text-align: center;
+  margin: 1rem 0;
+  background-color: #5588e3;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card {
+  background-color: #4268af;
+  width: 50%;
+  padding: 0.5rem;
+}
+
+.card:nth-of-type(2),
+.card:nth-of-type(3),
+.card:nth-of-type(6),
+.card:nth-of-type(7),
+.card:nth-of-type(10),
+.card:nth-of-type(11),
+.card:nth-of-type(14),
+.card:nth-of-type(15),
+.card:nth-of-type(18),
+.card:nth-of-type(19),
+.card:nth-of-type(22),
+.card:nth-of-type(23),
+.card:nth-of-type(26),
+.card:nth-of-type(27),
+.card:nth-of-type(30) {
+  background-color: #3e61a5;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.stocks-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.search {
+  width: 240px;
+  height: 1.75rem;
+  padding-left: 0.4rem;
+  margin-bottom: 1rem;
+  outline: none;
+  border-radius: 4px;
+  border: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    background-color: #4268af !important;
+    width: 20%;
+    padding: 0.5rem;
+  }
+
+  .card:nth-of-type(2),
+  .card:nth-of-type(4),
+  .card:nth-of-type(6),
+  .card:nth-of-type(8),
+  .card:nth-of-type(10),
+  .card:nth-of-type(12),
+  .card:nth-of-type(14),
+  .card:nth-of-type(16),
+  .card:nth-of-type(18),
+  .card:nth-of-type(20),
+  .card:nth-of-type(22),
+  .card:nth-of-type(24),
+  .card:nth-of-type(26),
+  .card:nth-of-type(28),
+  .card:nth-of-type(30) {
+    background-color: #3e61a5 !important;
+  }
+
+  h4 {
+    font-size: 0.875rem;
+  }
+
+  h5 {
+    font-size: 0.75rem;
+  }
+
+  .stock-details {
+    font-size: 0.725rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .card {
+    background-color: #4268af !important;
+    width: 16.666%;
+    padding: 0.5rem;
+  }
+
+  .card:nth-of-type(7),
+  .card:nth-of-type(9),
+  .card:nth-of-type(11),
+  .card:nth-of-type(21),
+  .card:nth-of-type(19),
+  .card:nth-of-type(23) {
+    background-color: #3e61a5 !important;
+  }
+
+  .card:nth-of-type(8),
+  .card:nth-of-type(10),
+  .card:nth-of-type(12),
+  .card:nth-of-type(20),
+  .card:nth-of-type(22),
+  .card:nth-of-type(24) {
+    background-color: #4268af !important;
+  }
+
+  .stock-details {
+    font-size: 1rem;
+  }
+}

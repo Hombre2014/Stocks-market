@@ -1,10 +1,22 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Yuriy Chamkoriyski Stocks Market SPA React, Redux Capstone project
+# Stocks Market SPA React-Redux Capstone project
 
-> Capstone SPA project using React, Redux and API for the stocks market. Displaying real-time market information about stocks and detailed info for the selected stock symbol.
+> Capstone SPA project using React, Redux and API for the stocks market. Displaying stocks market information about the most traded US stocks and detailed info for the selected stock symbol.
 
-<!-- ![screenshot](./src/space-travelers.png) -->
+![App snapshots](./src/images/app_snapshots.jpg)
+
+## Short video presentation
+
+[Short presentation](https://www.loom.com/share/45553fc5b9fa42e7b7e9e39982558011)
+
+## Mini Demo
+
+![](./src/images/Mini%20Demo.gif)
+
+## Live Demo
+
+[Live demo](https://stocks-market-data.netlify.app/)
 
 ## Description
 
@@ -15,57 +27,12 @@ This React capstone project is about building a mobile web application to check 
 
 ![screenshot](./src/images/metrics_app.png)
 
-## Requirements:
-
-### API
-API First you need to choose an API to base the development of the webapp on. The API should allow you to get numeric values based on a parameter. We recommend that you choose an API that is open or needs an API key. If you choose an API that require authentication, you should implement it on your own.
-
-### Design
-- [x] You should follow these [design guidelines](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)), including:
-  - [x] Colors (select one main color for your website).
-  - [x] Typography: font face, size and weight.
-  - [x] Layout: composition and space between elements.
-The [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/) requires appropriate credit to the author.
-Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
-
-### Interactions
-- [x] Home page
-  - [x] When the page loads, the webapp shows the list of categories that could be filtered out by some parameter, for example by the category name.
-  - [x] Along with the category name, you will display some numeric values per category that come from the API.
-  - [x] When the user clicks (or taps) on a category item, the application navigates to the details page.
-- [x] Details page
-  - [x] In the details page, the webapp retrieves data from the API to show detailed data in the category.
-  - [x] When the user clicks on the "Back" button (<), the user navigates to the home page.
-
-### Testing requirements
-- [x] Create unit tests for pure functions in your Redux code.
-- [x] Create integration tests for your application using the React Testing Library.
-  - [x] You may need to mock the access to the API, so that your tests don't send actual requests.
-  - [x] You may need to mock the connection to the Redux Store.
-
-### Technical requirements
-- [x] The project is a single page application (SPA) built with React and Redux.
-- [x] The data retrieved from the API should be stored in the Redux store.
-- [x] You should filter the data that you retrieve from the API using a Filter stateless component.
-- [x] Every page (the main page and the pages for each item) should have a unique route within the SPA.
-- [x] The project should be deployed and accessible online (add a link to the online version of your app to your README file).
-
-### Project documentation
-Once you have finished the development of the project, you should record a video presenting the features of the project you built. It is a video with a maximum length of 5 minutes. The content of the video should include:
-- [x] a description of the project.
-- [x] a demo of the project features.
-- [x] you should also highlight some interesting piece of code or something you built that you are very proud of.
-
 ## Built With
 
 - Major languages: Javascript
 - Frameworks: React.js, Redux
 - Technologies used: Node.js, Babel, webpack
 - Tested with: - ESLint (JavaScript linting), Stylelint (style linting) Jest, React Testing Library
-
-## Live Demo
-
-No live demo link yet.
 
 ### Prerequisites
 
@@ -129,7 +96,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ### Deployment
 
-No deployment yet.
+Using [Netlify](https://app.netlify.com/).
 
 ## Author
 
@@ -151,6 +118,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
+The [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/) requires appropriate credit to the author.
+Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
 
 ## 📝 License
 

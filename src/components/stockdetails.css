@@ -1,0 +1,157 @@
+.info-container {
+  margin: 0.5rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+.nav > h2 {
+  margin: 0 auto;
+}
+
+.go-back {
+  cursor: pointer;
+  color: #fff;
+  transition: all, 0.6s;
+}
+
+.go-back:hover {
+  color: #c6c6c6;
+  font-weight: bold;
+  transform: scale(1.5);
+}
+
+.left {
+  min-width: 50%;
+  padding-right: 0.5rem;
+}
+
+.right {
+  min-width: 50%;
+}
+
+.left > h3,
+.left > h4,
+.left > h5 {
+  margin-bottom: 0.5rem;
+}
+
+.left > h5 {
+  line-height: 1.25rem;
+}
+
+.indices {
+  display: flex;
+  flex-direction: column;
+  min-height: 80%;
+  justify-content: space-between;
+}
+
+.company-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.company-info {
+  display: flex;
+  column-gap: 0.32rem;
+  margin-top: 1rem;
+  line-height: 1.5rem;
+}
+
+.company-data {
+  min-width: calc(50% - 0.16rem);
+}
+
+.ask {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.bid {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.market-info {
+  min-width: calc(50% - 0.16rem);
+}
+
+.bid-ask {
+  display: flex;
+  flex-direction: column;
+}
+
+.ask > p,
+.bid > p {
+  margin-right: 0.5rem;
+  font-size: 0.825rem;
+}
+
+.description {
+  margin-top: 1rem;
+  line-height: 1.25rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .info-container {
+    margin: 1rem;
+  }
+
+  .left {
+    min-width: 50%;
+  }
+
+  .right {
+    min-width: 50%;
+  }
+
+  .h5 {
+    font-size: 0.875rem;
+  }
+
+  .ask,
+  .bid {
+    justify-content: flex-start;
+  }
+
+  .ask > p,
+  .bid > p {
+    margin-right: 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .info-container {
+    margin: 2rem;
+  }
+
+  .stocks-section {
+    margin: 2rem 0;
+  }
+
+  .search {
+    margin: 2rem 0;
+    height: 2.5rem;
+  }
+
+  .indices {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .nav {
+    margin: 2rem 0;
+  }
+}

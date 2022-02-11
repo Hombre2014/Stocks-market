@@ -1,0 +1,14 @@
+.stock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 120px;
+}
+
+.stock-header > h4 {
+  font-size: 0.9rem;
+}
+
+.stock-details {
+  font-size: 0.825rem;
+}
