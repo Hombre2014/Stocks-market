@@ -6,6 +6,10 @@
 
 ![App snapshots](./src/images/app_snapshots.jpg)
 
+## Video presentation
+
+[Short presentation](https://www.loom.com/share/45553fc5b9fa42e7b7e9e39982558011)
+
 ## Description
 
 This React capstone project is about building a mobile web application to check a list of metrics (numeric values) that you will create making use of React and Redux. Select an API that provides numeric data about a topic that you like and then build the webapp around it. The webapp will have several pages:

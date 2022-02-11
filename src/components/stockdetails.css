@@ -17,9 +17,15 @@ h2 {
 }
 
 .go-back {
-  /* margin: 0.5rem 0; */
   cursor: pointer;
   color: #fff;
+  transition: all, 0.6s;
+}
+
+.go-back:hover {
+  color: #c6c6c6;
+  font-weight: bold;
+  transform: scale(1.5);
 }
 
 .left {

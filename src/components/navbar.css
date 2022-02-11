@@ -24,6 +24,11 @@
   text-decoration: none;
   color: #fff;
   cursor: pointer;
+  transition: all, 0.6s;
+}
+
+.home:hover {
+  color: #c6c6c6;
 }
 
 .main {
