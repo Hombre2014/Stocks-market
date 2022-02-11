@@ -6,13 +6,17 @@
 
 ![App snapshots](./src/images/app_snapshots.jpg)
 
-## Video presentation
+## Short video presentation
 
 [Short presentation](https://www.loom.com/share/45553fc5b9fa42e7b7e9e39982558011)
 
 ## Mini Demo
 
 ![](./src/images/Mini%20Demo.gif)
+
+## Live Demo
+
+[Live demo]([./src/images/snapshot_home.jpg](https://stocks-market-data.netlify.app/))
 
 ## Description
 
@@ -70,10 +74,6 @@ Once you have finished the development of the project, you should record a video
 - Frameworks: React.js, Redux
 - Technologies used: Node.js, Babel, webpack
 - Tested with: - ESLint (JavaScript linting), Stylelint (style linting) Jest, React Testing Library
-
-## Live Demo
-
-[Live demo]([./src/images/snapshot_home.jpg](https://stocks-market-data.netlify.app/))
 
 ### Prerequisites
 
