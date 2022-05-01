@@ -1,7 +1,7 @@
 import { getStocks } from './StocksReducer';
 
 const URL = 'https://api.finage.co.uk/market-information/us/most-actives';
-const apiKey = 'API_KEY71UYHHN4T6NYZY7718KF12JOV7B5NNJ6';
+const apiKey = process.env.REACT_APP_FINAGE_API_KEY;
 
 const StocksFetch = () => async (dispatch) => {
   const res = await fetch(`${URL}?apikey=${apiKey}`);
