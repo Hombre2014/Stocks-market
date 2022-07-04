@@ -1,7 +1,7 @@
 import { getStock } from './StockReducer';
 
 const URL = 'https://api.finage.co.uk/last/stock';
-const apiKey = 'API_KEY97TABP515TS1B1P74MYG1H55N6FU0YLD';
+const apiKey = 'API_KEY3eH6F8JXEENMRLR3S46CQK5G28QSR67G';
 
 const StockFetch = (payload) => async (dispatch) => {
   const res = await fetch(`${URL}/${payload}?apikey=${apiKey}`);
