@@ -1,10 +1,11 @@
+import env from 'react-dotenv';
 import { getInfo } from './InfoReducer';
 
 const URL = 'https://api.finage.co.uk/detail/stock';
-const apiKey = 'API_KEY3eH6F8JXEENMRLR3S46CQK5G28QSR67G';
+const { API_KEY } = env;
 
 const InfoFetch = (payload) => async (dispatch) => {
-  const res = await fetch(`${URL}/${payload}?apikey=${apiKey}`);
+  const res = await fetch(`${URL}/${payload}?apikey=${API_KEY}`);
   const info = await res.json();
   dispatch(getInfo(info));
 };

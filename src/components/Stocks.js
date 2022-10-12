@@ -19,7 +19,7 @@ const Stocks = () => {
 
   return (
     <div className="stocks-section">
-      <h2 className="most-heading">Most active US stocks</h2>
+      <h2 className="most-heading">Dow Jones Industrial Average 30 stocks</h2>
       <input onChange={searchStock} type="text" placeholder="Search for stock" className="search" value={searchString} />
       <section className="card-container">
         {selection.map(

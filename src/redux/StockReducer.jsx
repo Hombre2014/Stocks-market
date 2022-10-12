@@ -10,7 +10,7 @@ export const getStock = (payload) => ({
 const stockReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_STOCK:
-      return [action.payload];
+      return [action.payload.constituents];
     default:
       return state;
   }
