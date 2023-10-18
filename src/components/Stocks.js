@@ -5,6 +5,7 @@ import Stock from './Stock';
 import './stocks.css';
 
 const Stocks = () => {
+  /* eslint linebreak-style: ["error", "windows"] */
   const stocks = useSelector((state) => state.stocksReducer);
   const [searchString, setSearchString] = useState('');
 

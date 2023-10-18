@@ -19,6 +19,7 @@ const App = () => {
   useEffect(() => { dispatch(InfoFetch()); }, []);
 
   return (
+    /* eslint linebreak-style: ["error", "windows"] */
     <Router>
       <Navbar />
       <Routes>

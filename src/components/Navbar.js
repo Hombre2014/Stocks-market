@@ -4,6 +4,7 @@ import './navbar.css';
 import logo from '../images/stock-exchange.jpg';
 
 const Navbar = () => (
+  /* eslint linebreak-style: ["error", "windows"] */
   <nav>
     <div className="navigation">
       <h1><a href="/" className="home">Stocks Market</a></h1>

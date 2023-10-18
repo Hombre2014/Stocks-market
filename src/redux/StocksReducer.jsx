@@ -2,6 +2,7 @@ const GET_STOCKS = 'stocks-market/GET_STOCKS';
 
 export const initialState = [];
 
+/* eslint linebreak-style: ["error", "windows"] */
 export const getStocks = (payload) => ({
   type: GET_STOCKS,
   payload,
