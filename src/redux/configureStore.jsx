@@ -5,13 +5,14 @@ import stocksReducer from './StocksReducer';
 import stockReducer from './StockReducer';
 import infoReducer from './InfoReducer';
 
+/* eslint linebreak-style: ["error", "windows"] */
+
 const reducer = combineReducers({
-  stocksReducer, stockReducer, infoReducer,
+  stocksReducer,
+  stockReducer,
+  infoReducer,
 });
 
-const store = createStore(
-  reducer,
-  applyMiddleware(logger, thunk),
-);
+const store = createStore(reducer, applyMiddleware(logger, thunk));
 
 export default store;

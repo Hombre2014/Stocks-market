@@ -7,6 +7,7 @@ export const getInfo = (payload) => ({
   payload,
 });
 
+/* eslint linebreak-style: ["error", "windows"] */
 const infoReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_INFO:

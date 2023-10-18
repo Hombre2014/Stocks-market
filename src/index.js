@@ -6,6 +6,7 @@ import store from './redux/configureStore';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
+  /* eslint linebreak-style: ["error", "windows"] */
   <React.StrictMode>
     <Provider store={store}>
       <App />

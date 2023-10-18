@@ -7,6 +7,7 @@ import InfoFetch from '../redux/InfoFetch';
 import './stockdetails.css';
 
 const StockDetails = () => {
+  /* eslint linebreak-style: ["error", "windows"] */
   const stock = useSelector((state) => state.stockReducer);
   const params = useParams();
   const dispatch = useDispatch();

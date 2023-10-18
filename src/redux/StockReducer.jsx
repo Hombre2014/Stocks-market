@@ -7,6 +7,7 @@ export const getStock = (payload) => ({
   payload,
 });
 
+/* eslint linebreak-style: ["error", "windows"] */
 const stockReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_STOCK:

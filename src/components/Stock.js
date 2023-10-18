@@ -3,6 +3,7 @@ import './stock.css';
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
 
 const Stock = (stock) => {
+  /* eslint linebreak-style: ["error", "windows"] */
   const {
     name, symbol, price, change, percentage,
   } = stock;
